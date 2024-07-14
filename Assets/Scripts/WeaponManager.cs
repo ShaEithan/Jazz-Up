@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 public class WeaponManager : MonoBehaviour
 {
-     public GameObject[] weapons; // Array to hold weapons
+     public GameObject[] weapons; 
 
      void Start()
      {
-          SwitchWeapon(0); // Ensure the first weapon is active at the start
+          SwitchWeapon(0); 
      }
 
      void Update()
      {
-          // Optional: Handle keyboard input to switch weapons
+          
           if (Input.GetKeyDown(KeyCode.Alpha1))
           {
                SwitchWeapon(0);
@@ -33,7 +33,7 @@ public class WeaponManager : MonoBehaviour
           {
                for (int i = 0; i < weapons.Length; i++)
                {
-                    weapons[i].SetActive(i == index); // Activate the current weapon, deactivate others
+                    weapons[i].SetActive(i == index); 
                }
           }
      }
