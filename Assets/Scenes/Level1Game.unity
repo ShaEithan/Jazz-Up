@@ -29347,6 +29347,104 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1458357376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1458357378}
+  - component: {fileID: 1458357377}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1458357377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458357376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1064e4933f6c364f839fd0d783f3ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicianPrefab: {fileID: 5953249838315893751}
+  spawnPoint: {fileID: 1458357376}
+  spawnPointTransform: {fileID: 1458357378}
+  spawnInterval: 3
+  spawnLeft: 1
+--- !u!4 &1458357378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458357376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 60.61, y: 12.38, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1569436160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1569436162}
+  - component: {fileID: 1569436161}
+  m_Layer: 0
+  m_Name: SpawnPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1569436161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569436160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1064e4933f6c364f839fd0d783f3ed7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicianPrefab: {fileID: 5953249838315893751}
+  spawnPoint: {fileID: 1569436160}
+  spawnPointTransform: {fileID: 1569436162}
+  spawnInterval: 3
+  spawnLeft: 1
+--- !u!4 &1569436162
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569436160}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 54.32, y: 31.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1697338290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29604,7 +29702,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5149147969565109958, guid: 77108801644a8b54abb1ddedd3747bef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.8
+      value: -9.67
       objectReference: {fileID: 0}
     - target: {fileID: 5149147969565109958, guid: 77108801644a8b54abb1ddedd3747bef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -29666,6 +29764,11 @@ MonoBehaviour:
   damagedealt: 1
   player: {fileID: 1016284048}
   enemy: {fileID: 2805302880963120402}
+--- !u!1 &5953249838315893751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5953249837611502541, guid: 77108801644a8b54abb1ddedd3747bef, type: 3}
+  m_PrefabInstance: {fileID: 3197201587525967027}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -29681,3 +29784,5 @@ SceneRoots:
   - {fileID: 779911807}
   - {fileID: 606343485}
   - {fileID: 1697338290}
+  - {fileID: 1458357378}
+  - {fileID: 1569436162}
