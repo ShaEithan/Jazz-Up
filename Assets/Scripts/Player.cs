@@ -23,23 +23,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            takeDamage(1);
-        }
-
-        if(Input.GetKeyDown(KeyCode.P)) {
-            updateScore(2);
-        }
+        ToEndScreen();
     }
 
-    void takeDamage(int damage) {
+    public void takeDamage(int damage) {
         currentHealth -= damage;
         healthBar.setHealth(currentHealth);
         healthBar.setHealthText(currentHealth);
         healthBar.setHealthText(currentHealth);
     }
 
-    void updateScore(int addScore) {
+    public void updateScore(int addScore) {
         score += addScore;
         scoreText.setScoreText(score);
     }

@@ -22,5 +22,5 @@ public class Bullet : MonoBehaviour
           transform.position += transform.right * Time.deltaTime * speed;
           
     }
-
+     
 }
