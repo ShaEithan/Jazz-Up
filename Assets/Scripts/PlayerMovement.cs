@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -47,9 +50,12 @@ public class PlayerMovement : MonoBehaviour
           if (faceright && horizontal < 0f || !faceright && horizontal > 0f)
           {
                faceright = !faceright;
-               Vector3 localScale = transform.localScale;
-               localScale.x *= -1f;
-               transform.localScale = localScale;
+
+               transform.Rotate(new Vector3(0, 180, 0));
           }
      }
 }
+
+
+
+

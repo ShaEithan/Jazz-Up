@@ -61,5 +61,13 @@ public class EnemyPatrol : MonoBehaviour
           Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
           Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
           Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
-     }    
+     }
+
+     private void OnTriggerEnter2D(Collider2D collision)
+     {
+          if (collision.tag == "Bullet")
+          {
+               Destroy(gameObject);
+          }
+     }
 }
