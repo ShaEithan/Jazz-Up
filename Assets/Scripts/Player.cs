@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player : MonoBehaviour
@@ -42,4 +43,12 @@ public class Player : MonoBehaviour
         score += addScore;
         scoreText.setScoreText(score);
     }
+
+     public void ToEndScreen()
+     {
+          if (currentHealth <= 0)
+          {
+               SceneManager.LoadScene("EndScene");
+          }
+     }
 }
