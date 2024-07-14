@@ -7,8 +7,10 @@ public class Player : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
-
+    public int score = 0;
+    
     public HealthBar healthBar;
+    public Score scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,10 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) {
             takeDamage(1);
         }
+
+        if(Input.GetKeyDown(KeyCode.P)) {
+            updateScore(2);
+        }
     }
 
     void takeDamage(int damage) {
@@ -30,5 +36,10 @@ public class Player : MonoBehaviour
         healthBar.setHealth(currentHealth);
         healthBar.setHealthText(currentHealth);
         healthBar.setHealthText(currentHealth);
+    }
+
+    void updateScore(int addScore) {
+        score += addScore;
+        scoreText.setScoreText(score);
     }
 }
