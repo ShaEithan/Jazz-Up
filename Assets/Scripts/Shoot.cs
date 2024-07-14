@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour
 {
      public Transform shootingPoint;
      public GameObject bulletPrefab;
+
      // Start is called before the first frame update
 
      //public Transform shootingPoint;
@@ -34,7 +35,10 @@ public class Shoot : MonoBehaviour
 
      void Shooter()
      {
-          Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);
+          GameObject bulletCopy = Instantiate(bulletPrefab, shootingPoint.position, transform.rotation);
+          bulletCopy.SetActive(true);
+
+          Destroy(bulletCopy, 1f);
      }
 
 }
