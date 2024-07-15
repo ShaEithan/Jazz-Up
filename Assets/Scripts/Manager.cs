@@ -12,7 +12,7 @@ public class Manager : MonoBehaviour
 
     public void ToGame()
     {
-        SceneManager.LoadScene("TestSceneWithTiles");
+        SceneManager.LoadScene("Level1Game");
     }
 
     public void ToMenu()
