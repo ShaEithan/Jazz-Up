@@ -24,8 +24,9 @@ public class EndScene : MonoBehaviour
 
     void Update() {
         if (player.currentHealth <= 0 && !gameEnded) {
-            gameEnded = true;
+            Debug.Log("Game Ended");
             gameOverPanel.SetActive(true);   
+            Debug.Log("Enabled Game Over Panel");
             gameOverScoreText.text = playerScoreText.text;
             HealthBar.SetActive(false);
             ScoreObject.SetActive(false);
