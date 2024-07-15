@@ -21,6 +21,10 @@ public class Enemy : MonoBehaviour
             player.updateScore(player.score);
             Destroy(enemy);
         }
+
+        if (player.currentHealth == 0) {
+            enemy.SetActive(false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col){

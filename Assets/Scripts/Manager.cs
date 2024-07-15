@@ -5,14 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
-
     public void ToGame()
     {
-        SceneManager.LoadScene("TestSceneWithTiles");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Level1Game");
     }
 
     public void ToMenu()

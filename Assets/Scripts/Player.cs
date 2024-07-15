@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     
     public HealthBar healthBar;
     public Score scoreText;
+    public GameObject playerObject;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +24,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ToEndScreen();
+        if (currentHealth <= 0) {
+            playerObject.SetActive(false);
+        }
     }
 
     public void takeDamage(int damage) {
@@ -38,11 +41,11 @@ public class Player : MonoBehaviour
         scoreText.setScoreText(score);
     }
 
-     public void ToEndScreen()
-     {
-          if (currentHealth <= 0)
-          {
-               SceneManager.LoadScene("EndScene");
-          }
-     }
+    //  public void ToEndScreen()
+    //  {
+    //       if (currentHealth <= 0)
+    //       {
+    //            SceneManager.LoadScene("EndScene");
+    //       }
+    //  }
 }
